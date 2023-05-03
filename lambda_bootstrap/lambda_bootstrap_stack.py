@@ -1,5 +1,3 @@
-import os
-
 from aws_cdk import (
     Duration,
     Stack,
@@ -29,10 +27,10 @@ class LambdaBootstrapStack(Stack):
             self, "GoHealthcheckLambda",
             code=_lambda.Code.from_asset("lambda"),
             handler="main",
-            runtime=_lambda.Runtime.GO_1_X
+            runtime=_lambda.Runtime.GO_1_X,
             role=role,
-            memorySize: 128,
-            timeout: Duration.seconds(10),
+            memorySize=128,
+            timeout=Duration.seconds(10),
         )
 
         # API Gateway without IAM authentication
