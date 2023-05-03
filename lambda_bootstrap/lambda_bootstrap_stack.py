@@ -29,7 +29,7 @@ class LambdaBootstrapStack(Stack):
             handler="main",
             runtime=_lambda.Runtime.GO_1_X,
             role=role,
-            memorySize=128,
+            memory_size=128,
             timeout=Duration.seconds(10),
         )
 
