@@ -1,17 +1,7 @@
-# lambda-openai-bootstrap
+> note, this is based on another one of my repos, so the README is a bit goofy and out of date...
 
-> ### 🚨 **CAUTION** 🚨
-> This is beta software that generates un-auth'd API gateway endpoints which use OpenAI APIs. Do not share those
-> endpoints with anyone.
-> For now, I encourage you to destroy the infra after use. Command below.
-
-> TODO: add auth
-
-> TODO: add github action(s)
-
-> TODO: add message queue + trigger
-
-## Prerequisites
+# lambda-go-bootstrap
+## Prerequisites (for local dev)
 
 1. [AWS Account](https://aws.amazon.com/)
 2. [AWS CLI](https://aws.amazon.com/cli/) - [Installation Guide](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
@@ -19,33 +9,14 @@
 4. [Python](https://www.python.org/) (version 3.9 or higher) - [Installation Guide](https://www.python.org/downloads/)
 5. [AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html) - Install the AWS CDK by
    running `npm install -g aws-cdk`
-6. [OpenAI API Key](https://www.openai.com/) - detailed instructions at the bottom of README
 
 ## Setup
 
 ### 1. Clone this repo
 
 ```bash
-$ git clone https://github.com/pkarl/lambda-openai-bootstrap.git`
-$ cd lambda-openai-bootstrap
-```
-
-### 2. Create & activate the virtual environment
-
-```bash
-python -m venv .venv
-source .venv/bin/activate  # For Linux/macOS
-```
-
-> Windows: `.venv\Scripts\activate`
-
-### 3. Install python packages for CDK App _and_ for Lambda Layer
-
-```bash
-pip install -r requirements.txt
-cd layer
-pip install -r requirements.txt -t python
-cd ..
+$ git clone https://github.com/pkarl/lambda-go-bootstrap.git`
+$ cd lambda-go-bootstrap
 ```
 
 ### 4. Configure the AWS CLI

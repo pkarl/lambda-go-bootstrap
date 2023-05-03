@@ -9,7 +9,6 @@ __pycache__
 cdk.out
 
 node_modules/*
-layer/python/*
 
 .idea/*
 package-lock.json
