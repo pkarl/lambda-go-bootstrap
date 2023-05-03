@@ -56,6 +56,7 @@ jobs:
 
       - name: Deploy Lambda to AWS using CDK
         run: |
+          source .venv/bin/activate
           mkdir -p lambda
           cp -R lambda/healthcheck/main lambda
-          cdk deploy
+          npx cdk deploy
