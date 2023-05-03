@@ -57,5 +57,5 @@ jobs:
       - name: Deploy Lambda to AWS using CDK
         run: |
           mkdir -p lambda
-          cp healthcheck lambda
+          cp -R lambda/healthcheck/main lambda
           cdk deploy
