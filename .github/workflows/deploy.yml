@@ -29,16 +29,13 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install JS dependencies
-        run: |
-          npm install -g aws-cdk
-          npm install
-
-      - name: Deploy CDK Stack
+      - name: Install JS deps + Deploy CDK Stack
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
+          npm install -g aws-cdk
+          npm install
           npx cdk bootstrap
           npx cdk deploy --require-approval never
 
