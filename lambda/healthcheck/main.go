@@ -14,7 +14,7 @@ type Response struct {
 func HandleRequest(ctx context.Context, request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 	response := Response{
 		Foo: "bar",
-	}ggc
+	}
 
 	responseJSON, err := json.Marshal(response)
 	if err != nil {
